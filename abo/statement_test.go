@@ -39,6 +39,4 @@ func TestStatement(t *testing.T) {
 	if tr.SS != 7815392681 {
 		t.Fatal("bad SS")
 	}
-
-	t.Fatal(tr)
 }
