@@ -123,11 +123,7 @@ func (it *Item) Write(inWr io.Writer) error { //nolint:gocyclo,doesn't make sens
 	}
 
 	// new line
-	if err := wr.WriteLineEnd(); err != nil {
-		return err
-	}
-
-	return nil
+	return wr.WriteLineEnd()
 }
 
 // Write writes the order group to a writer
@@ -192,11 +188,7 @@ func (gr *Group) Write(inWr io.Writer) error { //nolint:gocyclo,doesn't make sen
 	}
 
 	// new line
-	if err := wr.WriteLineEnd(); err != nil {
-		return err
-	}
-
-	return nil
+	return wr.WriteLineEnd()
 }
 
 // AddItem adds a payment order to the group
@@ -269,11 +261,7 @@ func (or *Order) writeAccounting(inWr io.Writer) error { //nolint:gocyclo,doesnt
 	}
 
 	// new line
-	if err := wr.WriteLineEnd(); err != nil {
-		return err
-	}
-
-	return nil
+	return wr.WriteLineEnd()
 }
 
 // Write writes the order to a writer
