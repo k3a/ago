@@ -1,4 +1,4 @@
-[![GoDoc](https://godoc.org/github.com/k3a/ago?status.svg)](https://godoc.org/github.com/k3a/ago)
+[![GoDoc](https://godoc.org/github.com/k3a/ago/abo?status.svg)](https://godoc.org/github.com/k3a/ago/abo)
 [![Build Status](https://travis-ci.org/k3a/ago.svg?branch=master)](https://travis-ci.org/k3a/ago)
 [![Coverage Status](https://coveralls.io/repos/k3a/ago/badge.svg?branch=master&service=github)](https://coveralls.io/github/k3a/ago?branch=master)
 [![Report Card](https://goreportcard.com/badge/github.com/k3a/ago)](https://goreportcard.com/report/github.com/k3a/ago)
