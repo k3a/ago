@@ -102,16 +102,16 @@ func (it *Item) Write(inWr io.Writer) error { //nolint:gocyclo,doesn't make sens
 		if err := wr.WriteInt(it.SS, 10); err != nil {
 			return err
 		}
-
-		// field separator
-		if err := wr.WriteStr(" ", 1); err != nil {
-			return err
-		}
 	} else {
-		// field separator
+		// field separator if SS not specified
 		if err := wr.WriteStr(" ", 1); err != nil {
 			return err
 		}
+	}
+
+	// field separator
+	if err := wr.WriteStr(" ", 1); err != nil {
+		return err
 	}
 
 	// msg for recipient (optional)
@@ -122,12 +122,7 @@ func (it *Item) Write(inWr io.Writer) error { //nolint:gocyclo,doesn't make sens
 			trimmedMsg = trimmedMsg[:maxMsgLen]
 		}
 
-		if err := wr.WriteStr("AV:"+trimmedMsg, 3+ /*maxMsgLen*/ len(trimmedMsg)); err != nil {
-			return err
-		}
-	} else {
-		// field separator
-		if err := wr.WriteStr(" ", 1); err != nil {
+		if err := wr.WriteStrWindows1250("AV:"+trimmedMsg, 3+ /*maxMsgLen*/ len(trimmedMsg)); err != nil {
 			return err
 		}
 	}
